@@ -35,6 +35,8 @@ void Except_raise(const T* e, const char* file, int line);
 #define RERAISE Except_raise(Except_frame.exception, \
                              Except_frame.file, Except_frame.line)
 
+//#define RETURN switch()
+
 #define TRY do { \
   volatile int Except_flag; \
   Except_Frame Except_frame; \
